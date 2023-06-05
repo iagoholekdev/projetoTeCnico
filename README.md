@@ -68,8 +68,9 @@ Compilação e Execução<br>
 Siga as etapas abaixo para compilar e executar o sistema:
 
 <b>Clone o repositório Git em um diretório local:</b><br>
-<b>git clone git@github.com:iagoholekdev/projetoTeCnico.git</b>
-<h2>Compilando o back-end</h2>
+<b>git clone git@github.com:iagoholekdev/projetoTeCnico.git</b><br><br>
+<h2>Detalhe: realizar estes processos pelo intelijj ou vscode!(Conforme o vídeo)</h2><br><br>
+<h2>Compilando o back-end</h2><br>
 <b>Navegue até o diretório raiz do projeto:></b><br>
 cd server<br>
 <b>Compile o projeto utilizando o Maven:</b><br>
