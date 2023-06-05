@@ -20,15 +20,15 @@ import static org.postgresql.core.ConnectionFactory.openConnection;
 public class Main {
 
     public static void main(String[] args) throws SQLException, LiquibaseException {
-       String url = "jdbc:postgresql://localhost:5432/postgres";
-       String username = "postgres";
-       String password = "postgres";
-       Properties properties = new Properties();
-       Connection connection = DriverManager.getConnection(url, username, password);
-       Database database = DatabaseFactory.getInstance().findCorrectDatabaseImplementation(new JdbcConnection(connection));
-       try (Liquibase liquibase = new liquibase.Liquibase("classpath:db/changelog/db-changelog.xml", new ClassLoaderResourceAccessor(), database)){
-         properties.forEach((key, value) -> liquibase.setChangeLogParameter(Objects.toString(key), value));
-         liquibase.update(new Contexts(), new LabelExpression());
+        String url = "jdbc:postgresql://localhost:5432/postgres";
+        String username = "postgres";
+        String password = "postgres";
+        Properties properties = new Properties();
+        Connection connection = DriverManager.getConnection(url, username, password);
+        Database database = DatabaseFactory.getInstance().findCorrectDatabaseImplementation(new JdbcConnection(connection));
+        try (Liquibase liquibase = new liquibase.Liquibase("classpath:db/changelog/db-changelog.xml", new ClassLoaderResourceAccessor(), database)){
+            properties.forEach((key, value) -> liquibase.setChangeLogParameter(Objects.toString(key), value));
+            liquibase.update(new Contexts(), new LabelExpression());
         }
 
     }
