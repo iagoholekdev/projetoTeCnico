@@ -1,0 +1,34 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+
+    <changeSet id="createTable-procedimentoss" author="iago">
+        <createTable tableName="procedimentos">
+            <column name="id" type="serial">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="procedimento" type="integer"/>
+        </createTable>
+
+    </changeSet>
+    <changeSet id="insert-default-procedimentos-111" author="iago">
+        <insert tableName="procedimentos">
+            <column name="procedimento" value="1234"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-default-procedimentos-222" author="iago">
+        <insert tableName="procedimentos">
+            <column name="procedimento" value="4567"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-default-procedimentos-333" author="iago">
+        <insert tableName="procedimentos">
+            <column name="procedimento" value="6789"/>
+        </insert>
+    </changeSet>
+
+
+</databaseChangeLog>
