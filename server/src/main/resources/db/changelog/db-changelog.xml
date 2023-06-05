@@ -3,32 +3,44 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
 
-    <changeSet id="createTable-proc11" runOnChange="true" author="iago">
+    <changeSet id="createTable-procedimentoss213" runOnChange="true" author="iago">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="procedimentos"/>
+            </not>
+        </preConditions>
         <createTable tableName="procedimentos">
             <column name="id" type="serial">
                 <constraints primaryKey="true"/>
             </column>
             <column name="procedimento" type="integer"/>
         </createTable>
-
     </changeSet>
-    <changeSet id="insert9" runOnChange="true" author="iago">
+
+    <changeSet id="insert12312111" runOnChange="true" author="iago">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="procedimentos"/>
+        </preConditions>
         <insert tableName="procedimentos">
             <column name="procedimento" value="1234"/>
         </insert>
     </changeSet>
 
-    <changeSet id="insert8" runOnChange="true" author="iago">
+    <changeSet id="insert-212322" runOnChange="true" author="iago">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="procedimentos"/>
+        </preConditions>
         <insert tableName="procedimentos">
             <column name="procedimento" value="4567"/>
         </insert>
     </changeSet>
 
-    <changeSet id="insert7" runOnChange="true" author="iago">
+    <changeSet id="insert23" runOnChange="true" author="iago">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="procedimentos"/>
+        </preConditions>
         <insert tableName="procedimentos">
             <column name="procedimento" value="6789"/>
         </insert>
     </changeSet>
-
-
 </databaseChangeLog>
