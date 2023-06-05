@@ -81,6 +81,7 @@ mvn exec:java</br></br>
 <b>Scripts de Versionamento com Liquibase</b><br>
 O sistema utiliza o Liquibase para gerenciar as alterações no banco de dados.<br>
 Os scripts de versionamento podem ser encontrados no diretório src/main/resources/db/changelog. <br>
+Detalhe: se por algum acaso não rodar os comandos, vá até o db-changelog.xml, altere os ids, rode o mvn clean install e mvn compile, e novamente rode mvn exec:java!<br>
 Ao executar o back-end pela primeira vez, o Liquibase irá criar as tabelas e inserir os dados iniciais com base nos scripts disponíveis.<br><br>
 
 
