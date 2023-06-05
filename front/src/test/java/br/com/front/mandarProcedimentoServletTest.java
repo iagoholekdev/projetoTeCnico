@@ -1,4 +1,4 @@
-package br.com.front;
+
 
 import br.com.serverside.dao.ProcedimentoDAO;
 import br.com.serverside.infra.ConnectionFactory;
@@ -6,13 +6,11 @@ import br.com.serverside.model.Procedimento;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 class mandarProcedimentoServletTest {
 

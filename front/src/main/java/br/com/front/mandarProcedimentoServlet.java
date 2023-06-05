@@ -22,7 +22,6 @@ import java.util.List;
 public class mandarProcedimentoServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         int procedimento = Integer.parseInt(request.getParameter("procedimento"));
         int idade = Integer.parseInt(request.getParameter("idade"));
         String sexo = request.getParameter("sexo");
