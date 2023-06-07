@@ -98,5 +98,16 @@ mvn test<br><br>
 <h4>Lembrando: para que o front funcione, é necessário compilar o back-end para que a tabela seja criada no banco de dados</h4>
 Acesse o sistema no navegador utilizando a seguinte URL: http://localhost:8080/procedimento.html<br><br>
 
+
+<h2>Rodando docker</h2><br>
+<b>Front-end</b><br>
+cd front<br>
+Compile o .war do projeto<br>
+Rode no terminal: docker build -t nome-da-imagem-que-vc-deseja .<br>
+Aguarde ele buildar a imagem e logo após isso rode: docker run -p 8080:8080 nome-da-imagem-que-vc-criou<br>
+Acesse a url: http://localhost:8080/procedimento.html :)<br><br>
+
+
+
 <h2>Autor</h2>
 <h3>Iago</h3>
